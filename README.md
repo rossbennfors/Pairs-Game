@@ -1,3 +1,8 @@
+# Description
+- This is a game where you have to match cards with the same image on
+- As you progress through levels you have to match more pairs
+- Scores are determined by how quick you can match the cards and how many levels you complete
+
 # Home Page (index.php)
 
 - "Register Now" button (if not registered)
