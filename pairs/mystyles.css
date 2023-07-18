@@ -1,0 +1,500 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    overflow: hidden;
+}
+
+#main {
+    background-image: url("ArcadeBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 10px;
+}
+
+#main::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    min-height: 100vh;
+    font-weight: bold;
+}
+
+.title h1 {
+    text-shadow: 0 0 10px rgb(255, 2, 127), 0 0 20px rgb(255, 2, 127),
+        0 0 40px rgb(255, 2, 127);
+    font-size: 70px;
+}
+
+.para h2 {
+    text-shadow: 0 0 10px rgb(255, 2, 127), 0 0 20px rgb(255, 2, 127),
+        0 0 40px rgb(255, 2, 127);
+    color: black;
+    font-size: 40px;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-shadow: 0 0 10px rgb(75, 238, 246), 0 0 20px rgb(75, 238, 246),
+        0 0 40px rgb(75, 238, 246);
+    font-size: 40px;
+}
+.para a {
+    text-shadow: 0 0 10px rgb(75, 238, 246), 0 0 20px rgb(75, 238, 246),
+        0 0 40px rgb(75, 238, 246);
+    font-size: 40px;
+
+    color: white;
+}
+.para a:hover {
+    font-size: 40px;
+    border: 3px solid rgb(75, 238, 246);
+    padding: 8px;
+}
+
+.para {
+    text-align: center;
+}
+
+nav {
+    width: 100vw;
+    background-color: blue;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 2, 127);
+}
+
+.nav-link-wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+}
+
+li.home-link {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    padding: 20px 40px 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(75, 238, 246);
+    color: white;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.form h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: rgb(255, 2, 127);
+}
+
+.form .input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form .input-group input {
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+}
+
+.form .input-group label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+    color: rgb(75, 238, 246);
+}
+
+.form .input-group input:focus + label,
+.form .input-group input:valid + label {
+    transform: translateY(-22px);
+}
+
+.submit-btn {
+    display: block;
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background: rgb(75, 238, 246);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(75, 238, 246);
+    padding: 10px;
+}
+
+.form a:hover {
+    border: 2px solid rgb(75, 238, 246);
+    padding: 8px;
+}
+
+div #error {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    font-size: 10px;
+    color: red;
+    padding-top: 15px;
+}
+
+.av-label{
+    color: rgb(75, 238, 246);
+}
+.av-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.av-group input[type="radio"] {
+    display: none;
+}
+
+.nav-avatar {
+    display: flex;
+    width: 40px;
+    height: 40px;
+}
+
+.av-group img {
+    width: 50px;
+    height: 50px;
+}
+
+.av-group label {
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    border: 5px solid #ccc;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.av-group label #exception {
+    border: none;
+}
+
+.av-group input[type="radio"]:checked + label {
+    border-color: rgb(255, 2, 127);
+}
+
+button {
+    border-radius: 20px;
+    border: 2px solid black;
+    color: rgb(255, 2, 127);
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 20px;
+}
+
+button:hover {
+    border: 2px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.leaderboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.leaderboard h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: rgb(255, 2, 127);
+}
+
+.leaderboard {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 5px rgb(75, 238, 246);
+    padding: 20px;
+    margin: 10px;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow-x: auto;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    color: #333;
+}
+th {
+    background-color: blue;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid black;
+}
+td {
+    border: 1px solid black;
+    padding: 10px;
+    height: 18px;
+    
+}
+
+td:first-child {
+    font-weight: bold;
+    min-width: 150px;
+}
+
+td:last-child {
+    width: 100px;
+}
+
+.game-wrapper {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 5px rgb(75, 238, 246);
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    height: 510px;
+    width: 100vw;
+}
+
+.game-header {
+    text-align: center;
+    color: rgb(255, 2, 127);
+    height: 38.5px;
+}
+
+span.rules {
+    color: black;
+    font-size: 20px;
+    margin: 8px;
+    text-align: start;
+    width: 100%;
+}
+
+#score {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+#time {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    z-index: 1;
+    padding-top: 20px;
+}
+
+#lives {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#start {
+    display: flex;
+    color: rgb(255, 2, 127);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    text-align: center;
+}
+
+#game-content.hide,
+#start.hide,
+#time.hide,
+#score.hide,
+#lives.hide,
+#play-again.hide {
+    display: none;
+}
+
+#game-content {
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: calc(2 * 200px + 10px);
+    width: calc(8 * 130px + 100px);
+}
+
+#play-again a {
+    border: 2px solid black;
+    border-radius: 20px;
+    color: rgb(255, 2, 127);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 15px;
+}
+
+#play-again a:hover {
+    border: 2px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+    cursor: pointer;
+    padding: 15px;
+}
+
+#play-again span.disclaimer {
+    font-size: 10px;
+}
+
+.card {
+    border-radius: 5px;
+    height: 184.6px;
+    width: 130px;
+    border: 1px solid black;
+    background-color: aquamarine;
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    cursor: pointer;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card .front {
+    display: none;
+}
+
+.card .back img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+.card .front img {
+    height: 100px;
+}
+
+.card.flipped .front {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.card.flipped .back {
+    display: none;
+}
+
+.card.matched {
+    box-shadow: 0 0 10px green;
+}
